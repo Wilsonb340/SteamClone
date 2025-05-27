@@ -1,0 +1,364 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Barra superior */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    padding: 10px 20px;
+    border-bottom: 2px solid #f1c40f;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap; /* Asegura que los elementos estén en una sola fila */
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.user-options {
+    display: flex;
+    gap: 15px;
+}
+
+.user-options a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.user-options a:hover {
+    color: #d4ac0d;
+}
+
+/* Contenedor */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Barra de búsqueda del foro */
+.forum-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.forum-search input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.forum-search button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.forum-search button:hover {
+    background-color: #45a049;
+}
+
+/* Categorías del foro en horizontal */
+.forum-categories-horizontal {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.forum-categories-horizontal h2 {
+    color: #b6b5b1;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.categories-list {
+    display: flex;
+    gap: 20px;
+}
+
+.categories-list a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.categories-list a:hover {
+    color: #f1c40f;
+}
+
+/* Barra de búsqueda para apartados */
+.forum-search-apartados {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.apartados-list {
+    display: flex;
+    gap: 15px;
+}
+
+.apartados-list a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.apartados-list a:hover {
+    color: #f1c40f;
+}
+
+.forum-search-apartados input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.forum-search-apartados button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.forum-search-apartados button:hover {
+    background-color: #45a049;
+}
+
+/* Publicaciones recientes */
+.recent-posts {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.recent-posts h2 {
+    color: #b6b5b1;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.post {
+    margin-bottom: 15px;
+}
+
+.post h3 {
+    color: #ddd;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.post h3 a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.post h3 a:hover {
+    color: #f1c40f;
+}
+
+.post p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 5px 0 0;
+}
+
+.post .author {
+    color: #f1c40f;
+}
+
+/* Crear nuevo tema */
+.new-topic {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.new-topic h2 {
+    color: #b6b5b1;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.new-topic form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.new-topic label {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.new-topic input, .new-topic textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.new-topic button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.new-topic button:hover {
+    background-color: #45a049;
+}
+
+/* Botón "Volver arriba" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f1c40f;
+    color: #1b1b1b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: none;
+}
+
+.back-to-top:hover {
+    background-color: #d4ac0d;
+}
+/* Media Queries para Responsividad */
+
+/* Pantallas más grandes (hasta 768px) */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .user-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .forum-search {
+        flex-direction: column;
+    }
+
+    .forum-search-apartados {
+        flex-direction: column;
+    }
+
+    .recent-posts, .new-topic {
+        padding: 15px;
+    }
+}
+
+/* Pantallas más pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .register-container {
+        margin: 60px 1rem 1rem;
+        padding: 1.5rem;
+        max-width: 100%;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .input-group input {
+        font-size: 0.9rem;
+    }
+
+    .register-btn {
+        font-size: 0.9rem;
+    }
+
+    .login-link {
+        font-size: 0.8rem;
+    }
+}
+
+

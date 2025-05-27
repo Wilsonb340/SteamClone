@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - Tienda de Juegos</title>
+    <link rel="stylesheet" href="/Styles/perfil.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <a href="home.html" class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo" />
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Tienda</a>
+            <a href="foro.html">Comunidad</a>
+            <a href="/Indlogo.html">Catálogo</a>
+            <a href="cart.html">Carrito</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="user-options">
+            <a href="#">SrRay</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sección de Perfil -->
+        <div class="profile-section">
+            <!-- Columna izquierda: Información del usuario, botones y amigos -->
+            <div class="left-column">
+                <!-- Información del usuario -->
+                <div class="user-info">
+                    <img src="/Imagenes/xbox0.jpg" alt="Foto de perfil" class="profile-pic">
+                    <h2 class="username">SrRay</h2>
+                    <p class="user-description">Descripción del usuario...</p>
+                </div>
+
+                <!-- Botones de navegación -->
+                <div class="navigation-buttons">
+                    <button class="nav-button">Estado: Activo</button>
+                    <button class="nav-button" onclick="window.location.href='/Index/libreria.html'">Juegos</button>
+
+                    <button class="nav-button">Lista de Deseos</button>
+                    <button class="nav-button">Inventario</button>
+                    <button class="nav-button">Logros</button>
+                    <button class="nav-button" onclick="window.location.href='/Index/CONFIGURACION.html'">Configuracion</button>
+                </div>
+
+                <!-- Amigos -->
+                <div class="friends-section">
+                    <h3>Amigos</h3>
+                    <div class="friends-list">
+                        <div class="friend">
+                            <img src="/Imagenes/xbox1.jpg" alt="Amigo 1">
+                            <span>NdHripper</span>
+                        </div>
+                        <div class="friend">
+                            <img src="/Imagenes/xbox2.jpg" alt="Amigo 2">
+                            <span>ZeroKended</span>
+                        </div>
+                        <div class="friend">
+                            <img src="/Imagenes/xbox3.jpg" alt="Amigo 3">
+                            <span>Willson</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna derecha: Juegos en colección y actividad reciente -->
+            <div class="right-column">
+                <!-- Juegos en colección -->
+                <div class="game-collection">
+                    <h3>Juegos en Colección</h3>
+                    <div class="game-images">
+                        <img src="/Imagenes/hollow.jpg" alt="Hollow Knight">
+                        <img src="/Imagenes/elden pequeña.jpg" alt="Elden Ring">
+                        <img src="/Imagenes/sims4.jpg" alt="Sims 4">
+                        <img src="/Imagenes/lethal.jpg" alt="Lethal Company">
+                    </div>
+                </div>
+
+                <!-- Actividad reciente -->
+                <div class="recent-activity">
+                    <h3>Actividad Reciente</h3>
+                    <div class="activity-list">
+                        <!-- Juego 1 -->
+                        <div class="activity-item">
+                            <img src="/Imagenes/hollow.jpg" alt="Hollow Knight">
+                            <div class="activity-info">
+                                <h4>Hollow Knight</h4>
+                                <p>Logro desbloqueado: "Primer paso"</p>
+                            </div>
+                        </div>
+
+                        <!-- Juego 2 -->
+                        <div class="activity-item">
+                            <img src="/Imagenes/lethal.jpg" alt="Lethal Company">
+                            <div class="activity-info">
+                                <h4>Lethal Company</h4>
+                                <p>Logro desbloqueado: "Explorador"</p>
+                            </div>
+                        </div>
+
+                        <!-- Juego 3 -->
+                        <div class="activity-item">
+                            <img src="/Imagenes/elden pequeña.jpg" alt="Elden Ring">
+                            <div class="activity-info">
+                                <h4>Elden Ring</h4>
+                                <p>Logro desbloqueado: "Maestro"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón "Volver arriba" -->
+    <a href="#top" class="back-to-top">↑ Volver arriba</a>
+    <script src="/Scripts/perfil.js"></script>
+</body>
+</html>

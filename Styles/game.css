@@ -1,0 +1,216 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #ddd;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Barra superior */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    padding: 10px 20px;
+    border-bottom: 2px solid #f1c40f;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+/* Contenedor principal */
+.game-page {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Cabecera del juego */
+.game-header {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Asegura que los elementos se adapten */
+}
+
+.game-banner img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.game-summary {
+    flex: 1;
+}
+
+.game-summary h1 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+/* Sección de reseñas */
+.game-reviews {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.game-reviews textarea {
+    width: 100%;
+    height: 80px;
+    background: #444;
+    color: #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.submit-review {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submit-review:hover {
+    background-color: #219150;
+}
+
+/* Juegos relacionados */
+.related-games {
+    margin-top: 30px;
+}
+
+.game-suggestions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+}
+
+.suggestion-card {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1 1 calc(33% - 20px); /* Tres tarjetas por fila */
+    margin-bottom: 20px;
+}
+
+.suggestion-card img {
+    width: 120px;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.suggestion-card p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .game-page {
+        width: 90%;
+    }
+
+    .game-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .game-banner img {
+        width: 100%;
+    }
+
+    .game-summary h1 {
+        font-size: 1.8rem;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .add-to-cart {
+        font-size: 1rem;
+    }
+
+    .game-suggestions {
+        flex-direction: column;
+    }
+
+    .suggestion-card {
+        flex: 1 1 100%; /* Las tarjetas ocupan el 100% de ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    .game-header {
+        gap: 10px;
+    }
+
+    .game-summary h1 {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .game-reviews textarea {
+        height: 100px;
+    }
+
+    .submit-review {
+        width: 100%;
+    }
+}

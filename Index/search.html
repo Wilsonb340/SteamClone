@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Juegos - Tienda</title>
+    <link rel="stylesheet" href="/Styles/search.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Tienda</a>
+            <a href="#">Comunidad</a>
+            <a href="#">Ayuda</a>
+            <a href="cart.html">Carrito</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="user-options">
+            <a href="Login.html">Sign In</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <div class="filter-group">
+                <h3>Géneros</h3>
+                <ul>
+                    <li><input type="checkbox"> Acción</li>
+                    <li><input type="checkbox"> Aventura</li>
+                    <li><input type="checkbox"> RPG</li>
+                    <li><input type="checkbox"> Shooter</li>
+                    <li><input type="checkbox"> Terror</li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3>Plataforma</h3>
+                <ul>
+                    <li><input type="checkbox"> Windows</li>
+                    <li><input type="checkbox"> Mac</li>
+                    <li><input type="checkbox"> Ubuntu 24.2 </li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3>Precio</h3>
+                <ul>
+                    <li><input type="checkbox"> Gratis</li>
+                    <li><input type="checkbox"> Menos de $10</li>
+                    <li><input type="checkbox"> Menos de $30</li>
+                    <li><input type="checkbox"> Más de $30</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="search-results">
+            <h2>Resultados de búsqueda</h2>
+
+            <div class="game-item">
+                <img src="/Imagenes/fallout4.jpg" alt="Fallout 4">
+                <div class="game-info">
+                    <h3>Fallout 4</h3>
+                    <p>RPG / Mundo Abierto / Exploración</p>
+                    <span class="price">$4.99</span>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="game-item">
+                <img src="/Imagenes/division2.jpg" alt="The Division 2">
+                <div class="game-info">
+                    <h3>Tom Clancy's The Division 2</h3>
+                    <p>Multijugador / Acción / Shooter</p>
+                    <span class="price">$29.99</span>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="game-item">
+                <img src="/Imagenes/remant.jpg" alt="Remnant 2">
+                <div class="game-info">
+                    <h3>Remnant II</h3>
+                    <p>Acción / Aventura / Shooter</p>
+                    <span class="price">$49.99</span>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="prev">« Anterior</button>
+                <button class="page active">1</button>
+                <button class="page">2</button>
+                <button class="page">3</button>
+                <button class="next">Siguiente »</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería de Juegos - Tienda de Juegos</title>
+    <link rel="stylesheet" href="/Styles/libreria.css"> <!-- Ruta modificada -->
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo"> <!-- Ruta modificada -->
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Tienda</a> <!-- Ruta modificada -->
+            <a href="foro.html">Comunidad</a> <!-- Ruta modificada -->
+            <a href="Catalogo.html">Catálogo</a> <!-- Ruta modificada -->
+            <a href="cart.html">Carrito</a> <!-- Ruta modificada -->
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="user-options">
+            <a href="perfil.html">SrRay</a> <!-- Ruta modificada -->
+        </div>
+    </header>
+
+    <div class="container">
+
+<h2>Mis Juegos Comprados</h2>
+<div id="purchased-games" class="games-gallery">
+  <!-- Aquí se cargarán las imágenes desde localStorage -->
+</div>
+
+
+        <!-- Panel de filtros desplegable -->
+        <div class="filters-panel">
+            <h3 onclick="toggleFilters()">Filtrar por ▼</h3>
+            <div class="filter-options" id="filterOptions" style="display: none;">
+                <div class="filter-section">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#">Acción</a></li>
+                        <li><a href="#">Aventura</a></li>
+                        <li><a href="#">RPG</a></li>
+                        <li><a href="#">Estrategia</a></li>
+                        <li><a href="#">Terror</a></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h4>Etiquetas</h4>
+                    <ul>
+                        <li><a href="#">Multijugador</a></li>
+                        <li><a href="#">Un jugador</a></li>
+                        <li><a href="#">Cooperativo</a></li>
+                        <li><a href="#">Mundo abierto</a></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h4>Ordenar por</h4>
+                    <ul>
+                        <li><a href="#">Recientes</a></li>
+                        <li><a href="#">Más jugados</a></li>
+                        <li><a href="#">Alfabético</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galería de juegos -->
+        <div class="games-gallery">
+            <a href="/Index/libreriajuego.html"> <!-- Ruta modificada -->
+                <div class="game-item">
+                    <img src="/Imagenes/hollow.jpg" alt="Hollow Knight"> <!-- Ruta modificada -->
+                </div>
+            </a>
+            <div class="game-item" onclick="showGame('elden')">
+                <img src="/Imagenes/elden pequeña.jpg" alt="Elden Ring"> <!-- Ruta modificada -->
+            </div>
+            <div class="game-item" onclick="showGame('lethal')">
+                <img src="/Imagenes/lethal.jpg" alt="Lethal Company"> <!-- Ruta modificada -->
+            </div>
+            <div class="game-item" onclick="showGame('sims')">
+                <img src="/Imagenes/sims4.jpg" alt="Sims 4"> <!-- Ruta modificada -->
+            </div>
+            <!-- Puedes agregar más juegos aquí -->
+        </div>
+    </div>
+
+    <!-- Botón "Volver arriba" -->
+    <a href="#top" class="back-to-top">↑ Volver arriba</a>
+
+    <script>
+        function toggleFilters() {
+            const filterOptions = document.getElementById('filterOptions');
+            filterOptions.style.display = filterOptions.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        function showGame(game) {
+            // Redirige a la página del juego seleccionado
+            window.location.href = `/Index/game-${game}.html`; <!-- Ruta modificada -->
+        }
+    </script>
+
+    <script src="/Scripts/libreria.js"></script>
+
+</body>
+</html>

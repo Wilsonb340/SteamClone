@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - Tienda de Juegos</title>
+  <link rel="stylesheet" href="/Styles/home.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <img src="/Imagenes/logo.png" alt="Logo" />
+    </div>
+    <nav class="nav-links">
+      <a href="#">Tienda</a>
+      <a href="foro.html">Comunidad</a>
+      <a href="Catalogo.html">Catálogo</a>
+      <a href="cart.html">Carrito</a>
+    </nav>
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search"
+        onkeyup="showSuggestions()"
+        autocomplete="off"
+      />
+      <div id="suggestions" class="suggestions-box"></div>
+    </div>
+    <div class="user-options">
+      <a href="perfil.html">SrRay</a>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <h1>Bienvenido a JGW Games</h1>
+    <p>Explora nuestra amplia colección de juegos y DLCs.</p>
+    <button class="explore" onclick="document.getElementById('games-container').scrollIntoView({ behavior: 'smooth' });">
+      Explorar Juegos
+    </button>
+  </section>
+
+  <main class="container">
+    <section class="window recommended-games">
+      <div class="section-header">
+        <h2>Juegos Recomendados</h2>
+        <a href="Catalogo.html" class="see-more">Ver más</a>
+      </div>
+      <div class="game-list scrollable" id="games-container"></div> <!-- Ajuste importante -->
+    </section>
+  </main>
+
+  <a href="#top" class="back-to-top">↑ Volver arriba</a>
+
+  
+  <script src="/Scripts/homecart.js"></script>
+  <script src="/Scripts/home.js"></script>
+  
+</body>
+</html>

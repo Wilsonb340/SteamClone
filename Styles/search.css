@@ -1,0 +1,208 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #ddd;
+    margin: 0;
+}
+
+/* Barra superior */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    padding: 10px 20px;
+    border-bottom: 2px solid #f1c40f;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.user-options a {
+    color: #f1c40f;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+/* Contenedor */
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Barra lateral - Filtros */
+.filters {
+    width: 250px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1 1 250px; /* Asegura que el filtro no se desborde en pantallas pequeñas */
+}
+
+.filters h2, .filters h3 {
+    color: #f1c40f;
+}
+
+.filter-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.filter-group li {
+    margin: 5px 0;
+}
+
+/* Resultados de búsqueda */
+.search-results {
+    flex: 1;
+}
+
+.search-results h2 {
+    margin-bottom: 10px;
+}
+
+/* Items de juegos */
+.game-item {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.game-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.game-info {
+    flex: 1;
+}
+
+.price {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.pagination button {
+    background-color: #444;
+    color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.pagination .active {
+    background-color: #f1c40f;
+    color: #111;
+}
+
+.pagination button:hover {
+    background-color: #666;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filters {
+        width: 100%;
+        max-width: 300px; /* Ajusta el tamaño máximo del filtro */
+    }
+
+    .game-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .game-item img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+
+    .filters {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .game-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+
+    .game-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .pagination button {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+}

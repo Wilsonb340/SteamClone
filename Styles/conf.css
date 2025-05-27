@@ -1,0 +1,237 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1b1b1b;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Barra superior */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111;
+    padding: 10px 20px;
+    border-bottom: 2px solid #f1c40f;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #f1c40f;
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.user-options a {
+    color: #f1c40f;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.user-options a:hover {
+    color: #d4ac0d;
+}
+
+/* Contenedor general */
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Ventanas flotantes */
+.window {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #111;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #f1c40f;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: #333;
+}
+
+/* Contenido */
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Secciones */
+.section h3 {
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Botones */
+button {
+    background-color: #f1c40f;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #000;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #d4ac0d;
+}
+
+.danger {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.danger:hover {
+    background-color: #c0392b;
+}
+
+
+/* === RESPONSIVE DESIGN === */
+
+/* Encabezado */
+@media (max-width: 1024px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .user-options {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* Pantallas medianas y pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        padding: 8px;
+    }
+
+    .window {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    button {
+        padding: 6px 10px;
+    }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 25px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    .search-bar input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .user-options a {
+        font-size: 0.9rem;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .window {
+        margin: 10px 0;
+    }
+
+    .danger {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}

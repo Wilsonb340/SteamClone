@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda de Juegos</title>
+    <link rel="stylesheet" href="/Styles/home.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#">Tienda</a>
+            <a href="foro.html">Comunidad</a>
+            <a href="Catalogo.html">Catálogo</a>
+            <a href="cart.html">Carrito</a>
+        </nav>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search" onkeyup="showSuggestions()">
+            <div id="suggestions" class="suggestions-box"></div>
+        </div>
+
+        <div class="user-options">
+            <a href="perfil.html">SrRay</a>
+        </div>
+    </header>
+
+    <script>
+        const games = [
+            { title: "Elden Ring", image: "/Imagenes/elden.jpg", url: "/Index/game.html?title=Elden%20Ring" },
+            { title: "Spider-Man", image: "/Imagenes/spiderman.jpg", url: "/Index/game.html?title=Spider-Man" },
+            { title: "God of War", image: "/Imagenes/godofwar.jpg", url: "/Index/game.html?title=God%20of%20War" },
+            { title: "The Last of Us", image: "/Imagenes/tlou.jpg", url: "/Index/game.html?title=The%20Last%20of%20Us" }
+        ];
+    
+        function showSuggestions() {
+            const input = document.getElementById("searchInput").value.toLowerCase();
+            const suggestionsBox = document.getElementById("suggestions");
+            
+            suggestionsBox.innerHTML = "";
+            if (input.length === 0) {
+                suggestionsBox.style.display = "none";
+                return;
+            }
+    
+            const filteredGames = games.filter(game => game.title.toLowerCase().includes(input));
+            if (filteredGames.length === 0) {
+                suggestionsBox.style.display = "none";
+                return;
+            }
+    
+            filteredGames.forEach(game => {
+                const suggestionItem = document.createElement("div");
+                suggestionItem.classList.add("suggestion-item");
+                suggestionItem.innerHTML = `
+                    <img src="${game.image}" alt="${game.title}">
+                    <span>${game.title}</span>
+                `;
+                suggestionItem.onclick = () => window.location.href = game.url;
+                suggestionsBox.appendChild(suggestionItem);
+            });
+    
+            suggestionsBox.style.display = "block";
+        }
+    </script>
+
+    <div class="hero-section">
+        <h1>Bienvenido a JGW Games</h1>
+        <p>Explora nuestra amplia colección de juegos y DLCs.</p>
+        <button class="explore">Explorar Juegos</button>
+    </div>
+
+    <div class="container">
+        <!-- Juegos Recomendados -->
+        <div class="window recommended-games">
+            <div class="section-header">
+                <h2>Juegos Recomendados</h2>
+                <a href="#" class="see-more">Ver más</a>
+            </div>
+
+            <div class="game-list scrollable">
+                <div class="game-item large">
+                    <img src="/Imagenes/elden.jpg" alt="Elden Ring" onclick="redirectToGame('Elden Ring', 'elden.jpg', 'Un gran juego de mundo abierto de FromSoftware.', '$34.99')" style="cursor: pointer;">
+                    <div class="game-info">
+                        <h3>Elden Ring</h3>
+                        <span class="price">$34.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+<div class="container">
+    <h2>Catálogo Completo de Juegos</h2>
+    <div id="catalogo-container" class="game-list scrollable">
+        <!-- Aquí se cargarán los juegos dinámicamente -->
+    </div>
+</div>
+
+<!-- Incluye los scripts al final del body -->
+<script src="/Scripts/catalogo.js"></script>
+<script src="/Scripts/catalogocart.js"></script>
+                <script>
+                    function redirectToGame(title, image, description, price) {
+                        const url = `/Index/game.html?title=${encodeURIComponent(title)}&image=${encodeURIComponent("/Imagenes/" + image)}&description=${encodeURIComponent(description)}&price=${encodeURIComponent(price)}`;
+                        window.location.href = url;
+                    }
+                </script>
+
+                <div class="game-item large">
+                    <img src="/Imagenes/spiderman.jpg" alt="Spider-Man">
+                    <div class="game-info">
+                        <h3>Spider-Man</h3>
+                        <span class="price">$49.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item large">
+                    <img src="/Imagenes/godofwar.jpg" alt="God of War">
+                    <div class="game-info">
+                        <h3>God of War Ragnarok</h3>
+                        <span class="price">$39.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item large">
+                    <img src="/Imagenes/tlou.jpg" alt="The Last of Us">
+                    <div class="game-info">
+                        <h3>The Last of Us Parte 1</h3>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Juegos Destacados -->
+        <div class="window featured-games">
+            <div class="section-header">
+                <h2>Juegos Destacados</h2>
+                <a href="#" class="see-more">Ver más</a>
+            </div>
+            <div class="game-list scrollable">
+                <div class="game-item">
+                    <img src="/Imagenes/counter.jpeg" alt="Counter Strike 2">
+                    <div class="game-info">
+                        <h3>Counter Strike 2</h3>
+                        <span class="price">Gratis</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/projectz.jpg" alt="Project Zomboid">
+                    <div class="game-info">
+                        <h3>Project Zomboid</h3>
+                        <span class="price">$19.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/Raimbow.jpg" alt="Rainbow Six">
+                    <div class="game-info">
+                        <h3>Tom Clancy's Rainbow Six® Siege</h3>
+                        <span class="price">$25.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/cyberpunk.jpg" alt="Cyberpunk 2077">
+                    <div class="game-info">
+                        <h3>Cyberpunk 2077</h3>
+                        <span class="price">$39.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/seaot.jpg" alt="Sea of Thieves">
+                    <div class="game-info">
+                        <h3>Sea of Thieves</h3>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nuevos Lanzamientos -->
+        <div class="window new-releases">
+            <div class="section-header">
+                <h2>Nuevos Lanzamientos</h2>
+                <a href="#" class="see-more">Ver más</a>
+            </div>
+            <div class="game-list scrollable">
+                <div class="game-item">
+                    <img src="/Imagenes/game5.jpg" alt="Juego 5">
+                    <div class="game-info">
+                        <h3>Juego 5</h3>
+                        <span class="price">$39.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/game6.jpg" alt="Juego 6">
+                    <div class="game-info">
+                        <h3>Juego 6</h3>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/game7.jpg" alt="Juego 7" title="Juego Spider-Man">
+                    <div class="game-info">
+                        <h3>Juego 7</h3>
+                        <span class="price">$39.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/game8.jpg" alt="Juego 8">
+                    <div class="game-info">
+                        <h3>Juego 8</h3>
+                        <span class="price">$29.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="game-item">
+                    <img src="/Imagenes/game9.jpg" alt="Juego 9">
+                    <div class="game-info">
+                        <h3>Juego 9</h3>
+                        <span class="price">$39.99</span>
+                        <button class="add-to-cart">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#top" class="back-to-top">↑ Volver arriba</a>
+   <script src="/Scripts/Catalogocart.js"></script>
+   <script src="/Scripts/Catalogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de la Comunidad - Tienda de Juegos</title>
+    <link rel="stylesheet" href="/Styles/foro.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Tienda</a>
+            <a href="#">Comunidad</a>
+            <a href="Catalogo.html">Catálogo</a>
+            <a href="cart.html">Carrito</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="user-options">
+            <a href="perfil.html">SrRay</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Barra de búsqueda para apartados -->
+        <div class="forum-search-apartados">
+            <div class="apartados-list">
+                <a href="#">Todo</a>
+                <a href="#">Pantallazos</a>
+                <a href="#">Videos</a>
+                <a href="#">Guías</a>
+            </div>
+            <input type="text" placeholder="Buscar temas o publicaciones...">
+            <button>Buscar</button>
+        </div>
+
+        <!-- Categorías del foro en horizontal -->
+        <div class="forum-categories-horizontal">
+            <h2>Categorías</h2>
+            <div class="categories-list">
+                <a href="#">General</a>
+                <a href="#">Juegos</a>
+                <a href="#">Soporte</a>
+            </div>
+        </div>
+
+        <!-- Publicaciones recientes -->
+        <div class="recent-posts">
+            <h2>Publicaciones Recientes</h2>
+            <div class="post">
+                <h3><a href="#">Nuevo parche para Hollow Knight</a></h3>
+                <p>Publicado por <span class="author">Usuario123</span> hace 2 horas</p>
+            </div>
+            <div class="post">
+                <h3><a href="#">¿Cómo derrotar al jefe final en Elden Ring?</a></h3>
+                <p>Publicado por <span class="author">GamerPro</span> hace 5 horas</p>
+            </div>
+            <div class="post">
+                <h3><a href="#">Problemas con la instalación de Lethal Company</a></h3>
+                <p>Publicado por <span class="author">TechSupport</span> hace 1 día</p>
+            </div>
+        </div>
+
+        <!-- Crear nuevo tema -->
+        <div class="new-topic">
+            <h2>Crear Nuevo Tema</h2>
+            <form>
+                <label for="topic-title">Título del Tema:</label>
+                <input type="text" id="topic-title" name="topic-title" required>
+                <label for="topic-content">Contenido:</label>
+                <textarea id="topic-content" name="topic-content" rows="5" required></textarea>
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Botón "Volver arriba" -->
+    <a href="#top" class="back-to-top">↑ Volver arriba</a>
+</body>
+</html>

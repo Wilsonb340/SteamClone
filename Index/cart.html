@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Carrito - Tienda de Juegos</title>
+    <link rel="stylesheet" href="/Styles/cart.css" />
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo" />
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Tienda</a>
+            <a href="foro.html">Comunidad</a>
+            <a href="Catalogo.html">Catálogo</a>
+            <a href="#">Carrito</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" />
+        </div>
+        <div class="user-options">
+            <a href="perfil.html">SrRay</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="window cart">
+            <h2>Carrito de Compras</h2>
+
+            <!-- Aquí se agregarán dinámicamente los items con JS -->
+
+            <div class="cart-summary">
+                <h3>Total Estimado:</h3>
+                <span class="total-price">$0.00</span>
+            </div>
+
+            <div class="cart-actions">
+                <button class="continue">Seguir Comprando</button>
+                <button class="gift">Comprar como Regalo</button>
+                <button class="buy">Comprar para Mí</button>
+            </div>
+        </div>
+
+        <div id="recommendations" class="window recommendations">
+            <h2>DLCs que te pueden interesar</h2>
+            <div class="dlc-item">
+                <img src="/Imagenes/elden.jpg" alt="Elden Ring DLC" />
+                <div class="dlc-info">
+                    <h3>Elden Ring</h3>
+                    <span class="price">$34.99</span>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+            </div>
+
+            <div class="dlc-item">
+                <img src="/Imagenes/elden.jpg" alt="Elden Ring DLC" />
+                <div class="dlc-info">
+                    <h3>Elden Ring</h3>
+                    <span class="discount">-34%</span>
+                    <span class="price">$23.09</span>
+                    <button class="add-to-cart">Agregar al Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Scripts/cart.js"></script>
+</body>
+</html>

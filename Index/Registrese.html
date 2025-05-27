@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/Styles/Registro.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav-menu">
+            <a href="#">Tienda</a>
+            <a href="#">Comunidad</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Carrito</a>
+        </div>
+    </nav>
+
+    <div class="wave-left"></div>
+    <div class="wave-right"></div>
+
+    <div class="register-container">
+        <div class="logo">
+            <img src="/Imagenes/Logo.png" alt="Logo">
+        </div>
+
+        <form id="registerForm">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+
+            <div class="input-group">
+                <input type="tel" id="numero" name="numero" placeholder="Número" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="correo" name="correo" placeholder="Correo" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="register-btn">Registrar</button>
+
+            <a href="Login.html" class="login-link">¿Ya tienes una cuenta? Inicia sesión</a>
+        </form>
+
+    </div>
+    
+    <script src="/Scripts/Registro.js"></script>
+
+</body>
+
+</html>

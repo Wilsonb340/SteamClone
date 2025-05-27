@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería de Juegos - Tienda de Juegos</title>
+    <link rel="stylesheet" href="/Styles/libreriajuego.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Tienda</a>
+            <a href="foro.html">Comunidad</a>
+            <a href="/Indlogo.html">Catálogo</a>
+            <a href="cart.html">Carrito</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="user-options">
+            <a href="perfil.html">SrRay</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Panel de filtros desplegable -->
+        <div class="filters-panel">
+            <h3 onclick="toggleFilters()">Filtrar por ▼</h3>
+            <div class="filter-options" id="filterOptions" style="display: none;">
+                <div class="filter-section">
+                    <h4>Categorías</h4>
+                    <ul>
+                        <li><a href="#">Acción</a></li>
+                        <li><a href="#">Aventura</a></li>
+                        <li><a href="#">RPG</a></li>
+                        <li><a href="#">Estrategia</a></li>
+                        <li><a href="#">Terror</a></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h4>Etiquetas</h4>
+                    <ul>
+                        <li><a href="#">Multijugador</a></li>
+                        <li><a href="#">Un jugador</a></li>
+                        <li><a href="#">Cooperativo</a></li>
+                        <li><a href="#">Mundo abierto</a></li>
+                    </ul>
+                </div>
+                <div class="filter-section">
+                    <h4>Ordenar por</h4>
+                    <ul>
+                        <li><a href="#">Recientes</a></li>
+                        <li><a href="#">Más jugados</a></li>
+                        <li><a href="#">Alfabético</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de juegos y página del juego -->
+        <div class="content">
+            <!-- Lista de juegos a la izquierda -->
+            <div class="games-list">
+                <div class="game-item" onclick="showGame('hollow')">
+                    <img src="/Imagenes/hollow.jpg" alt="Hollow Knight">
+                    <span>Hollow Knight</span>
+                </div>
+                <div class="game-item" onclick="showGame('elden')">
+                    <img src="/Imagenes/elden pequeña.jpg" alt="Elden Ring">
+                    <span>Elden Ring</span>
+                </div>
+                <div class="game-item" onclick="showGame('lethal')">
+                    <img src="/Imagenes/lethal.jpg" alt="Lethal Company">
+                    <span>Lethal Company</span>
+                </div>
+                <div class="game-item" onclick="showGame('sims')">
+                    <img src="/Imagenes/sims4.jpg" alt="Sims 4">
+                    <span>Sims 4</span>
+                </div>
+            </div>
+
+            <!-- Página del juego a la derecha -->
+            <div class="game-page" id="gamePage">
+                <img src="/Imagenes/hollowportada.jpg" alt="Portada del juego" class="game-cover">
+                <h2 class="game-title">Hollow Knight</h2>
+                <p class="game-description">Un juego de aventuras y exploración en un mundo oscuro y misterioso.</p>
+                <div class="game-actions">
+                    <button class="install-button">Instalar</button>
+                    <span class="space-required">Espacio requerido: 10 GB</span>
+                    <button class="config-button">Configuración</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón "Volver arriba" -->
+    <a href="#top" class="back-to-top">↑ Volver arriba</a>
+
+    <script>
+        function toggleFilters() {
+            const filterOptions = document.getElementById('filterOptions');
+            filterOptions.style.display = filterOptions.style.display === 'none' ? 'flex' : 'none';
+        }
+
+        function showGame(game) {
+            const gamePage = document.getElementById('gamePage');
+            const games = {
+                hollow: {
+                    cover: '/Imagenes/hollowportada.jpg',
+                    title: 'Hollow Knight',
+                    description: 'Un juego de aventuras y exploración en un mundo oscuro y misterioso.',
+                    space: '10 GB'
+                },
+                elden: {
+                    cover: '/Imagenes/elden.jpg',
+                    title: 'Elden Ring',
+                    description: 'Un RPG de mundo abierto con combates desafiantes y una historia épica.',
+                    space: '50 GB'
+                },
+                lethal: {
+                    cover: '/Imagenes/lethalportada.jpg',
+                    title: 'Lethal Company',
+                    description: 'Un juego de terror y cooperación en el espacio.',
+                    space: '5 GB'
+                },
+                sims: {
+                    cover: '/Imagenes/simsportada.jpg',
+                    title: 'Sims 4',
+                    description: 'Un juego de simulación de vida donde puedes crear y controlar personajes.',
+                    space: '20 GB'
+                }
+            };
+
+            gamePage.innerHTML = `
+                <img src="${games[game].cover}" alt="Portada del juego" class="game-cover">
+                <h2 class="game-title">${games[game].title}</h2>
+                <p class="game-description">${games[game].description}</p>
+                <div class="game-actions">
+                    <button class="install-button">Instalar</button>
+                    <span class="space-required">Espacio requerido: ${games[game].space}</span>
+                    <button class="config-button">Configuración</button>
+                </div>
+            `;
+        }
+    </script>
+
+<script src="/Scripts/libreriajuego.js"></script>
+
+</body>
+</html>

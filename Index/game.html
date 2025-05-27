@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detalles del Juego</title>
+    <link rel="stylesheet" href="/Styles/game.css" />
+</head>
+<body>
+    <header class="top-bar">
+        <a href="home.html" class="logo">
+            <img src="/Imagenes/logo.png" alt="Logo" />
+        </a>
+        <nav class="nav-links">
+            <a href="home.html">Inicio</a>
+            <a href="Catalogo.html">Catálogo</a>
+            <a href="cart.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main class="game-page">
+        <div class="game-header">
+            <div class="game-banner">
+                <img id="game-image" src="/Imagenes/placeholder.jpg" alt="Imagen del juego" />
+            </div>
+            <div class="game-summary">
+                <h1 id="game-title">Cargando...</h1>
+                <p id="game-description">Por favor, espera mientras cargamos la información del juego.</p>
+                <p><strong>Género:</strong> <span id="game-genre">-</span></p>
+                <p><strong>Desarrollador:</strong> <span id="game-developer">-</span></p>
+                <p><strong>Fecha de lanzamiento:</strong> <span id="game-release">-</span></p>
+                <span class="price" id="game-price">Precio no disponible</span>
+                <button class="add-to-cart">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="game-reviews">
+            <h2>Escribe una reseña</h2>
+            <textarea placeholder="Escribe tu reseña aquí..."></textarea>
+            <button class="submit-review">Publicar reseña</button>
+        </div>
+
+        <div class="related-games">
+            <h2>Juegos similares</h2>
+            <div class="game-suggestions" id="related-games-container">
+                <!-- Aquí se cargarán juegos relacionados -->
+            </div>
+        </div>
+    </main>
+
+    <script src="/Scripts/game.js"></script>
+    <script src="/Scripts/gamecart.js"></script>
+
+</body>
+</html>
